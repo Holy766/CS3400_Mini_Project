@@ -1,0 +1,38 @@
+#ifndef RESOURCE_H
+#define RESOURCE_H
+
+#include <string>
+
+using std::string;
+
+class Resource {
+private:
+    int resourceID;
+    string name;
+    string type;
+    string location;
+    int capacity;
+    bool available;
+public:
+    Resource();
+    Resource(int,string,string,string,int,bool);
+    //setters
+    void setResourceID(int);
+    void setName(string);
+    void setType(string);
+    void setLocation(string);
+    void setCapacity(int);
+    void setAvailable(bool);
+
+    // Getters
+    int getResourceID();
+    string getName();
+    string getType();
+    string getLocation();
+    int getCapacity();
+    bool isAvailable();
+    void display();
+};
+
+
+#endif // #ifnotdef
