@@ -1,8 +1,9 @@
 # CS3400_Mini_Project
-Data Structures mini project, Library Management System
+A C++ Library Management System that manages the library's resources and the people using them, with each data structure chosen for a specific job.
 
 
 # Project structure
+```text
 CS3400_Mini_Project/
 ├── main.cpp
 ├── include/        # .h files
@@ -13,3 +14,4 @@ CS3400_Mini_Project/
 ├── Makefile
 ├── README.md
 └── .gitignore
+```
