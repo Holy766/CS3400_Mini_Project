@@ -4,7 +4,7 @@
 
 template<typename T>
 struct Node {
-    Node<T> data;
+    T data;
     Node<T> * next;
 };
 
@@ -39,7 +39,7 @@ class Stack {
 
 };
 
-#include "../src/stack.h"
+#include "../src/stack.cpp"
 
 #endif
 

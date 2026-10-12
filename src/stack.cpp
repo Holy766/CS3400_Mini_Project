@@ -2,13 +2,13 @@
 #include<stdexcept>
 
 template<typename T>
-Stack<T>::Stack {
+Stack<T>::Stack() {
     top = nullptr;
     count = 0;
 }
 
 template<typename T>
-Stack<T>::~{
+Stack<T>::~Stack(){
     clear();
 }
 
@@ -18,6 +18,8 @@ void Stack<T>::push(T data) {
 
     newNode -> next = top;
     top = newNode;
+
+    count++;
 }
 
 
@@ -33,13 +35,13 @@ T Stack<T>::pop() {
     top = temp-> next;
 
     delete temp;
-
+    count--;
     return value;
 }
 
 template<typename T>
-T Stack<T>::peek() {
-    T Stack<T>::pop() {
+T Stack<T>::peek() 
+{
     if(top == nullptr) {
         throw std::underflow_error("Stack is empty");
     }
@@ -62,6 +64,8 @@ void Stack<T>::clear() {
     while(!isEmpty()) {
         pop();
     }
+
+    count = 0;
 }
 
 
