@@ -36,3 +36,33 @@ T Stack<T>::pop() {
 
     return value;
 }
+
+template<typename T>
+T Stack<T>::peek() {
+    T Stack<T>::pop() {
+    if(top == nullptr) {
+        throw std::underflow_error("Stack is empty");
+    }
+
+    return top->data;
+}
+
+template<typename T>
+bool Stack<T>::isEmpty() {
+    return top == nullptr && count == 0;
+}
+
+template<typename T>
+int Stack<T>::size() {
+    return count;
+}
+
+template<typename T>
+void Stack<T>::clear() {
+    while(!isEmpty()) {
+        pop();
+    }
+}
+
+
+
