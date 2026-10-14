@@ -151,6 +151,9 @@ void linkedlist<T>::removeparticular(int position){
 		}
 		current =current->next;
 	}
+    if(current ==  nullptr|| current->next == nullptr){
+        return;
+    }
 	Node<T>* temp =current->next;
 	current->next= temp->next;
 	
